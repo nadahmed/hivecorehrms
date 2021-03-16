@@ -51,7 +51,7 @@ RUN chown openhrms: /etc/openhrms-server.conf \
 
 
 
-# RUN systemctl enable openhrms-server
+RUN systemctl enable openhrms-server
 
 # ENTRYPOINT ["systemctl", "start", "openhrms-server"]
-ENTRYPOINT [ "/opt/openhrms/odoo-bin", "-c", "/etc/openhrms-server.conf" ]
+# ENTRYPOINT [ "/opt/openhrms/odoo-bin", "-c", "/etc/openhrms-server.conf" ]

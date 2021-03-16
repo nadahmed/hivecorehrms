@@ -1,7 +1,7 @@
 version: "3.9"
 
 services:
-  opnehrms:
+  openhrms:
     build: ./openhrms
     ports:
       - "8069:8069"
