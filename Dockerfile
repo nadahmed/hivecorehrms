@@ -36,7 +36,7 @@ RUN cd /tmp \
 
 
 
-COPY ./config/openhrms-server.service /lib/systemd/system/
+COPY ./openhrms/config/openhrms-server.service /lib/systemd/system/
 
 RUN chmod 755 /lib/systemd/system/openhrms-server.service \
   && chown root: /lib/systemd/system/openhrms-server.service
@@ -49,6 +49,12 @@ RUN cp /opt/openhrms/debian/odoo.conf /etc/openhrms-server.conf
 RUN chown openhrms: /etc/openhrms-server.conf \
   && chmod 640 /etc/openhrms-server.conf
 
+RUN cd /etc 
+COPY ./openhrms/config/openhrms-server.conf
+RUN cd /opt/openhrms/addons/web_responsive
+COPY ./openhrms/web_responsive-11.0.2.0.3/web_responsive
+RUN cd /opt/openhrms/addons/hr_biometric_machine_zk_demo
+COPY ./openhrms/hr_biometric_machine_zk_demo
 
 
 # RUN systemctl enable openhrms-server

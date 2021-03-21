@@ -1,8 +1,8 @@
-version: "3.9"
+version: "3.2"
 
 services:
   openhrms:
-    build: ./openhrms
+    build: ./
     ports:
       - "8069:8069"
     volumes:

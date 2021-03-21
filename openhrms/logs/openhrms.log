@@ -32675,3 +32675,424 @@ DETAIL:  Key (login)=(nooraldinahmed@hivecorelimited.com) already exists.
 2021-02-25 09:37:10,082 1 INFO hivecoredatabase odoo.addons.base.ir.ir_cron: Job `Reminder scheduler` done.
 2021-02-25 09:37:55,597 1 INFO ? odoo.service.server: Initiating shutdown
 2021-02-25 09:37:55,598 1 INFO ? odoo.service.server: Hit CTRL-C again or send a second signal to force the shutdown.
+2021-03-18 07:31:03,279 1 INFO ? odoo: Odoo version 11.0
+2021-03-18 07:31:03,281 1 INFO ? odoo: Using configuration file at /etc/openhrms-server.conf
+2021-03-18 07:31:03,282 1 INFO ? odoo: addons paths: ['/root/.local/share/Odoo/addons/11.0', '/opt/openhrms/addons', '/opt/openhrms/openhrms', '/opt/openhrms/odoo/addons']
+2021-03-18 07:31:03,283 1 INFO ? odoo: database: openhrms@postgres:5432
+2021-03-18 07:31:03,316 1 INFO ? odoo.service.server: HTTP service (werkzeug) running on 6d077871499c:8069
+2021-03-18 07:31:03,454 1 INFO ? odoo.addons.base.ir.ir_actions_report: Will use the Wkhtmltopdf binary at /usr/bin/wkhtmltopdf
+2021-03-18 08:12:31,518 1 INFO ? odoo.service.server: Initiating shutdown
+2021-03-18 08:12:31,538 1 INFO ? odoo.service.server: Hit CTRL-C again or send a second signal to force the shutdown.
+2021-03-18 08:12:49,784 1 INFO ? odoo: Odoo version 11.0
+2021-03-18 08:12:49,796 1 INFO ? odoo: Using configuration file at /etc/openhrms-server.conf
+2021-03-18 08:12:49,797 1 INFO ? odoo: addons paths: ['/root/.local/share/Odoo/addons/11.0', '/opt/openhrms/addons', '/opt/openhrms/openhrms', '/opt/openhrms/odoo/addons']
+2021-03-18 08:12:49,798 1 INFO ? odoo: database: openhrms@postgres:5432
+2021-03-18 08:12:49,834 1 INFO ? odoo.service.server: HTTP service (werkzeug) running on c81b9d202ed1:8069
+2021-03-18 08:12:49,976 1 INFO ? odoo.addons.base.ir.ir_actions_report: Will use the Wkhtmltopdf binary at /usr/bin/wkhtmltopdf
+2021-03-18 08:12:54,393 1 INFO ? odoo.service.server: Initiating shutdown
+2021-03-18 08:12:54,395 1 INFO ? odoo.service.server: Hit CTRL-C again or send a second signal to force the shutdown.
+2021-03-18 08:13:09,385 1 INFO ? odoo: Odoo version 11.0
+2021-03-18 08:13:09,386 1 INFO ? odoo: Using configuration file at /etc/openhrms-server.conf
+2021-03-18 08:13:09,386 1 INFO ? odoo: addons paths: ['/root/.local/share/Odoo/addons/11.0', '/opt/openhrms/addons', '/opt/openhrms/openhrms', '/opt/openhrms/odoo/addons']
+2021-03-18 08:13:09,387 1 INFO ? odoo: database: openhrms@postgres:5432
+2021-03-18 08:13:09,420 1 INFO ? odoo.service.server: HTTP service (werkzeug) running on 6ba383c60277:8069
+2021-03-18 08:13:09,622 1 INFO ? odoo.addons.base.ir.ir_actions_report: Will use the Wkhtmltopdf binary at /usr/bin/wkhtmltopdf
+2021-03-18 08:13:26,146 1 INFO ? odoo.addons.sms.wizard.send_sms: The `phonenumbers` Python module is not available. Phone number validation will be skipped. Try `pip3 install phonenumbers` to install it.
+2021-03-18 08:13:27,579 1 INFO ? odoo.http: HTTP Configuring static files
+2021-03-18 08:13:27,715 1 INFO ? odoo.sql_db: Connection to the database failed
+2021-03-18 08:13:27,717 1 INFO ? werkzeug: 172.20.0.1 - - [18/Mar/2021 08:13:27] "GET / HTTP/1.1" 500 -
+2021-03-18 08:13:27,721 1 ERROR ? werkzeug: Error on request:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/werkzeug/serving.py", line 205, in run_wsgi
+    execute(self.server.app)
+  File "/usr/local/lib/python3.6/site-packages/werkzeug/serving.py", line 193, in execute
+    application_iter = app(environ, start_response)
+  File "/opt/openhrms/odoo/service/server.py", line 348, in app
+    return self.app(e, s)
+  File "/opt/openhrms/odoo/service/wsgi_server.py", line 180, in application
+    return application_unproxied(environ, start_response)
+  File "/opt/openhrms/odoo/service/wsgi_server.py", line 154, in application_unproxied
+    result = handler(environ, start_response)
+  File "/opt/openhrms/odoo/http.py", line 1321, in __call__
+    return self.dispatch(environ, start_response)
+  File "/opt/openhrms/odoo/http.py", line 1295, in __call__
+    return self.app(environ, start_wrapped)
+  File "/usr/local/lib/python3.6/site-packages/werkzeug/wsgi.py", line 599, in __call__
+    return self.app(environ, start_response)
+  File "/opt/openhrms/odoo/http.py", line 1458, in dispatch
+    self.setup_db(httprequest)
+  File "/opt/openhrms/odoo/http.py", line 1390, in setup_db
+    httprequest.session.db = db_monodb(httprequest)
+  File "/opt/openhrms/odoo/http.py", line 1542, in db_monodb
+    dbs = db_list(True, httprequest)
+  File "/opt/openhrms/odoo/http.py", line 1509, in db_list
+    dbs = odoo.service.db.list_dbs(force)
+  File "/opt/openhrms/odoo/service/db.py", line 369, in list_dbs
+    with closing(db.cursor()) as cr:
+  File "/opt/openhrms/odoo/sql_db.py", line 637, in cursor
+    return Cursor(self.__pool, self.dbname, self.dsn, serialized=serialized)
+  File "/opt/openhrms/odoo/sql_db.py", line 178, in __init__
+    self._cnx = pool.borrow(dsn)
+  File "/opt/openhrms/odoo/sql_db.py", line 520, in _locked
+    return fun(self, *args, **kwargs)
+  File "/opt/openhrms/odoo/sql_db.py", line 588, in borrow
+    **connection_info)
+  File "/usr/local/lib/python3.6/site-packages/psycopg2/__init__.py", line 130, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+psycopg2.OperationalError: FATAL:  role "openhrms" does not exist
+2021-03-18 08:13:27,865 1 INFO ? odoo.sql_db: Connection to the database failed
+2021-03-18 08:13:27,868 1 INFO ? werkzeug: 172.20.0.1 - - [18/Mar/2021 08:13:27] "GET /favicon.ico HTTP/1.1" 500 -
+2021-03-18 08:13:27,873 1 ERROR ? werkzeug: Error on request:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/werkzeug/serving.py", line 205, in run_wsgi
+    execute(self.server.app)
+  File "/usr/local/lib/python3.6/site-packages/werkzeug/serving.py", line 193, in execute
+    application_iter = app(environ, start_response)
+  File "/opt/openhrms/odoo/service/server.py", line 348, in app
+    return self.app(e, s)
+  File "/opt/openhrms/odoo/service/wsgi_server.py", line 180, in application
+    return application_unproxied(environ, start_response)
+  File "/opt/openhrms/odoo/service/wsgi_server.py", line 154, in application_unproxied
+    result = handler(environ, start_response)
+  File "/opt/openhrms/odoo/http.py", line 1321, in __call__
+    return self.dispatch(environ, start_response)
+  File "/opt/openhrms/odoo/http.py", line 1295, in __call__
+    return self.app(environ, start_wrapped)
+  File "/usr/local/lib/python3.6/site-packages/werkzeug/wsgi.py", line 599, in __call__
+    return self.app(environ, start_response)
+  File "/opt/openhrms/odoo/http.py", line 1458, in dispatch
+    self.setup_db(httprequest)
+  File "/opt/openhrms/odoo/http.py", line 1390, in setup_db
+    httprequest.session.db = db_monodb(httprequest)
+  File "/opt/openhrms/odoo/http.py", line 1542, in db_monodb
+    dbs = db_list(True, httprequest)
+  File "/opt/openhrms/odoo/http.py", line 1509, in db_list
+    dbs = odoo.service.db.list_dbs(force)
+  File "/opt/openhrms/odoo/service/db.py", line 369, in list_dbs
+    with closing(db.cursor()) as cr:
+  File "/opt/openhrms/odoo/sql_db.py", line 637, in cursor
+    return Cursor(self.__pool, self.dbname, self.dsn, serialized=serialized)
+  File "/opt/openhrms/odoo/sql_db.py", line 178, in __init__
+    self._cnx = pool.borrow(dsn)
+  File "/opt/openhrms/odoo/sql_db.py", line 520, in _locked
+    return fun(self, *args, **kwargs)
+  File "/opt/openhrms/odoo/sql_db.py", line 588, in borrow
+    **connection_info)
+  File "/usr/local/lib/python3.6/site-packages/psycopg2/__init__.py", line 130, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+psycopg2.OperationalError: FATAL:  role "openhrms" does not exist
+2021-03-18 08:15:03,768 1 INFO ? odoo.service.server: Initiating shutdown
+2021-03-18 08:15:03,779 1 INFO ? odoo.service.server: Hit CTRL-C again or send a second signal to force the shutdown.
+2021-03-18 08:15:22,051 1 INFO ? odoo: Odoo version 11.0
+2021-03-18 08:15:22,052 1 INFO ? odoo: Using configuration file at /etc/openhrms-server.conf
+2021-03-18 08:15:22,052 1 INFO ? odoo: addons paths: ['/root/.local/share/Odoo/addons/11.0', '/opt/openhrms/addons', '/opt/openhrms/openhrms', '/opt/openhrms/odoo/addons']
+2021-03-18 08:15:22,052 1 INFO ? odoo: database: openhrms@postgres:5432
+2021-03-18 08:15:22,077 1 INFO ? odoo.service.server: HTTP service (werkzeug) running on e390b1d34728:8069
+2021-03-18 08:15:22,197 1 INFO ? odoo.addons.base.ir.ir_actions_report: Will use the Wkhtmltopdf binary at /usr/bin/wkhtmltopdf
+2021-03-18 08:15:29,695 1 INFO ? odoo.addons.sms.wizard.send_sms: The `phonenumbers` Python module is not available. Phone number validation will be skipped. Try `pip3 install phonenumbers` to install it.
+2021-03-18 08:15:30,710 1 INFO ? odoo.http: HTTP Configuring static files
+2021-03-18 08:15:30,716 1 INFO ? odoo.sql_db: Connection to the database failed
+2021-03-18 08:15:30,718 1 INFO ? werkzeug: 172.21.0.1 - - [18/Mar/2021 08:15:30] "GET / HTTP/1.1" 500 -
+2021-03-18 08:15:30,722 1 ERROR ? werkzeug: Error on request:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/werkzeug/serving.py", line 205, in run_wsgi
+    execute(self.server.app)
+  File "/usr/local/lib/python3.6/site-packages/werkzeug/serving.py", line 193, in execute
+    application_iter = app(environ, start_response)
+  File "/opt/openhrms/odoo/service/server.py", line 348, in app
+    return self.app(e, s)
+  File "/opt/openhrms/odoo/service/wsgi_server.py", line 180, in application
+    return application_unproxied(environ, start_response)
+  File "/opt/openhrms/odoo/service/wsgi_server.py", line 154, in application_unproxied
+    result = handler(environ, start_response)
+  File "/opt/openhrms/odoo/http.py", line 1321, in __call__
+    return self.dispatch(environ, start_response)
+  File "/opt/openhrms/odoo/http.py", line 1295, in __call__
+    return self.app(environ, start_wrapped)
+  File "/usr/local/lib/python3.6/site-packages/werkzeug/wsgi.py", line 599, in __call__
+    return self.app(environ, start_response)
+  File "/opt/openhrms/odoo/http.py", line 1458, in dispatch
+    self.setup_db(httprequest)
+  File "/opt/openhrms/odoo/http.py", line 1390, in setup_db
+    httprequest.session.db = db_monodb(httprequest)
+  File "/opt/openhrms/odoo/http.py", line 1542, in db_monodb
+    dbs = db_list(True, httprequest)
+  File "/opt/openhrms/odoo/http.py", line 1509, in db_list
+    dbs = odoo.service.db.list_dbs(force)
+  File "/opt/openhrms/odoo/service/db.py", line 369, in list_dbs
+    with closing(db.cursor()) as cr:
+  File "/opt/openhrms/odoo/sql_db.py", line 637, in cursor
+    return Cursor(self.__pool, self.dbname, self.dsn, serialized=serialized)
+  File "/opt/openhrms/odoo/sql_db.py", line 178, in __init__
+    self._cnx = pool.borrow(dsn)
+  File "/opt/openhrms/odoo/sql_db.py", line 520, in _locked
+    return fun(self, *args, **kwargs)
+  File "/opt/openhrms/odoo/sql_db.py", line 588, in borrow
+    **connection_info)
+  File "/usr/local/lib/python3.6/site-packages/psycopg2/__init__.py", line 130, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+psycopg2.OperationalError: FATAL:  role "openhrms" does not exist
+2021-03-18 08:15:31,357 1 INFO ? odoo.sql_db: Connection to the database failed
+2021-03-18 08:15:31,360 1 INFO ? werkzeug: 172.21.0.1 - - [18/Mar/2021 08:15:31] "GET /favicon.ico HTTP/1.1" 500 -
+2021-03-18 08:15:31,364 1 ERROR ? werkzeug: Error on request:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/werkzeug/serving.py", line 205, in run_wsgi
+    execute(self.server.app)
+  File "/usr/local/lib/python3.6/site-packages/werkzeug/serving.py", line 193, in execute
+    application_iter = app(environ, start_response)
+  File "/opt/openhrms/odoo/service/server.py", line 348, in app
+    return self.app(e, s)
+  File "/opt/openhrms/odoo/service/wsgi_server.py", line 180, in application
+    return application_unproxied(environ, start_response)
+  File "/opt/openhrms/odoo/service/wsgi_server.py", line 154, in application_unproxied
+    result = handler(environ, start_response)
+  File "/opt/openhrms/odoo/http.py", line 1321, in __call__
+    return self.dispatch(environ, start_response)
+  File "/opt/openhrms/odoo/http.py", line 1295, in __call__
+    return self.app(environ, start_wrapped)
+  File "/usr/local/lib/python3.6/site-packages/werkzeug/wsgi.py", line 599, in __call__
+    return self.app(environ, start_response)
+  File "/opt/openhrms/odoo/http.py", line 1458, in dispatch
+    self.setup_db(httprequest)
+  File "/opt/openhrms/odoo/http.py", line 1390, in setup_db
+    httprequest.session.db = db_monodb(httprequest)
+  File "/opt/openhrms/odoo/http.py", line 1542, in db_monodb
+    dbs = db_list(True, httprequest)
+  File "/opt/openhrms/odoo/http.py", line 1509, in db_list
+    dbs = odoo.service.db.list_dbs(force)
+  File "/opt/openhrms/odoo/service/db.py", line 369, in list_dbs
+    with closing(db.cursor()) as cr:
+  File "/opt/openhrms/odoo/sql_db.py", line 637, in cursor
+    return Cursor(self.__pool, self.dbname, self.dsn, serialized=serialized)
+  File "/opt/openhrms/odoo/sql_db.py", line 178, in __init__
+    self._cnx = pool.borrow(dsn)
+  File "/opt/openhrms/odoo/sql_db.py", line 520, in _locked
+    return fun(self, *args, **kwargs)
+  File "/opt/openhrms/odoo/sql_db.py", line 588, in borrow
+    **connection_info)
+  File "/usr/local/lib/python3.6/site-packages/psycopg2/__init__.py", line 130, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+psycopg2.OperationalError: FATAL:  role "openhrms" does not exist
+2021-03-18 08:16:35,252 1 INFO ? odoo.service.server: Initiating shutdown
+2021-03-18 08:16:35,277 1 INFO ? odoo.service.server: Hit CTRL-C again or send a second signal to force the shutdown.
+2021-03-18 08:16:58,955 1 INFO ? odoo: Odoo version 11.0
+2021-03-18 08:16:58,956 1 INFO ? odoo: Using configuration file at /etc/openhrms-server.conf
+2021-03-18 08:16:58,956 1 INFO ? odoo: addons paths: ['/root/.local/share/Odoo/addons/11.0', '/opt/openhrms/addons', '/opt/openhrms/openhrms', '/opt/openhrms/odoo/addons']
+2021-03-18 08:16:58,957 1 INFO ? odoo: database: openhrms@postgres:5432
+2021-03-18 08:16:58,990 1 INFO ? odoo.service.server: HTTP service (werkzeug) running on 1573c69d4e38:8069
+2021-03-18 08:16:59,162 1 INFO ? odoo.addons.base.ir.ir_actions_report: Will use the Wkhtmltopdf binary at /usr/bin/wkhtmltopdf
+2021-03-18 08:17:07,368 1 INFO ? odoo.addons.sms.wizard.send_sms: The `phonenumbers` Python module is not available. Phone number validation will be skipped. Try `pip3 install phonenumbers` to install it.
+2021-03-18 08:17:08,364 1 INFO ? odoo.http: HTTP Configuring static files
+2021-03-18 08:17:08,370 1 INFO ? odoo.sql_db: Connection to the database failed
+2021-03-18 08:17:08,373 1 INFO ? werkzeug: 172.22.0.1 - - [18/Mar/2021 08:17:08] "GET / HTTP/1.1" 500 -
+2021-03-18 08:17:08,377 1 ERROR ? werkzeug: Error on request:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/werkzeug/serving.py", line 205, in run_wsgi
+    execute(self.server.app)
+  File "/usr/local/lib/python3.6/site-packages/werkzeug/serving.py", line 193, in execute
+    application_iter = app(environ, start_response)
+  File "/opt/openhrms/odoo/service/server.py", line 348, in app
+    return self.app(e, s)
+  File "/opt/openhrms/odoo/service/wsgi_server.py", line 180, in application
+    return application_unproxied(environ, start_response)
+  File "/opt/openhrms/odoo/service/wsgi_server.py", line 154, in application_unproxied
+    result = handler(environ, start_response)
+  File "/opt/openhrms/odoo/http.py", line 1321, in __call__
+    return self.dispatch(environ, start_response)
+  File "/opt/openhrms/odoo/http.py", line 1295, in __call__
+    return self.app(environ, start_wrapped)
+  File "/usr/local/lib/python3.6/site-packages/werkzeug/wsgi.py", line 599, in __call__
+    return self.app(environ, start_response)
+  File "/opt/openhrms/odoo/http.py", line 1458, in dispatch
+    self.setup_db(httprequest)
+  File "/opt/openhrms/odoo/http.py", line 1390, in setup_db
+    httprequest.session.db = db_monodb(httprequest)
+  File "/opt/openhrms/odoo/http.py", line 1542, in db_monodb
+    dbs = db_list(True, httprequest)
+  File "/opt/openhrms/odoo/http.py", line 1509, in db_list
+    dbs = odoo.service.db.list_dbs(force)
+  File "/opt/openhrms/odoo/service/db.py", line 369, in list_dbs
+    with closing(db.cursor()) as cr:
+  File "/opt/openhrms/odoo/sql_db.py", line 637, in cursor
+    return Cursor(self.__pool, self.dbname, self.dsn, serialized=serialized)
+  File "/opt/openhrms/odoo/sql_db.py", line 178, in __init__
+    self._cnx = pool.borrow(dsn)
+  File "/opt/openhrms/odoo/sql_db.py", line 520, in _locked
+    return fun(self, *args, **kwargs)
+  File "/opt/openhrms/odoo/sql_db.py", line 588, in borrow
+    **connection_info)
+  File "/usr/local/lib/python3.6/site-packages/psycopg2/__init__.py", line 130, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+psycopg2.OperationalError: FATAL:  role "openhrms" does not exist
+2021-03-18 08:17:09,266 1 INFO ? odoo.sql_db: Connection to the database failed
+2021-03-18 08:17:09,273 1 INFO ? werkzeug: 172.22.0.1 - - [18/Mar/2021 08:17:09] "GET /favicon.ico HTTP/1.1" 500 -
+2021-03-18 08:17:09,279 1 ERROR ? werkzeug: Error on request:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/werkzeug/serving.py", line 205, in run_wsgi
+    execute(self.server.app)
+  File "/usr/local/lib/python3.6/site-packages/werkzeug/serving.py", line 193, in execute
+    application_iter = app(environ, start_response)
+  File "/opt/openhrms/odoo/service/server.py", line 348, in app
+    return self.app(e, s)
+  File "/opt/openhrms/odoo/service/wsgi_server.py", line 180, in application
+    return application_unproxied(environ, start_response)
+  File "/opt/openhrms/odoo/service/wsgi_server.py", line 154, in application_unproxied
+    result = handler(environ, start_response)
+  File "/opt/openhrms/odoo/http.py", line 1321, in __call__
+    return self.dispatch(environ, start_response)
+  File "/opt/openhrms/odoo/http.py", line 1295, in __call__
+    return self.app(environ, start_wrapped)
+  File "/usr/local/lib/python3.6/site-packages/werkzeug/wsgi.py", line 599, in __call__
+    return self.app(environ, start_response)
+  File "/opt/openhrms/odoo/http.py", line 1458, in dispatch
+    self.setup_db(httprequest)
+  File "/opt/openhrms/odoo/http.py", line 1390, in setup_db
+    httprequest.session.db = db_monodb(httprequest)
+  File "/opt/openhrms/odoo/http.py", line 1542, in db_monodb
+    dbs = db_list(True, httprequest)
+  File "/opt/openhrms/odoo/http.py", line 1509, in db_list
+    dbs = odoo.service.db.list_dbs(force)
+  File "/opt/openhrms/odoo/service/db.py", line 369, in list_dbs
+    with closing(db.cursor()) as cr:
+  File "/opt/openhrms/odoo/sql_db.py", line 637, in cursor
+    return Cursor(self.__pool, self.dbname, self.dsn, serialized=serialized)
+  File "/opt/openhrms/odoo/sql_db.py", line 178, in __init__
+    self._cnx = pool.borrow(dsn)
+  File "/opt/openhrms/odoo/sql_db.py", line 520, in _locked
+    return fun(self, *args, **kwargs)
+  File "/opt/openhrms/odoo/sql_db.py", line 588, in borrow
+    **connection_info)
+  File "/usr/local/lib/python3.6/site-packages/psycopg2/__init__.py", line 130, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+psycopg2.OperationalError: FATAL:  role "openhrms" does not exist
+2021-03-18 08:20:53,986 1 INFO ? odoo.service.server: Initiating shutdown
+2021-03-18 08:20:54,008 1 INFO ? odoo.service.server: Hit CTRL-C again or send a second signal to force the shutdown.
+2021-03-18 08:22:39,439 1 INFO ? odoo: Odoo version 11.0
+2021-03-18 08:22:39,441 1 INFO ? odoo: Using configuration file at /etc/openhrms-server.conf
+2021-03-18 08:22:39,442 1 INFO ? odoo: addons paths: ['/root/.local/share/Odoo/addons/11.0', '/opt/openhrms/addons', '/opt/openhrms/openhrms', '/opt/openhrms/odoo/addons']
+2021-03-18 08:22:39,457 1 INFO ? odoo: database: openhrms@postgres:5432
+2021-03-18 08:22:39,470 1 INFO ? odoo.service.server: HTTP service (werkzeug) running on 1573c69d4e38:8069
+2021-03-18 08:22:39,558 1 INFO ? odoo.addons.base.ir.ir_actions_report: Will use the Wkhtmltopdf binary at /usr/bin/wkhtmltopdf
+2021-03-18 08:22:50,097 1 INFO ? odoo.addons.sms.wizard.send_sms: The `phonenumbers` Python module is not available. Phone number validation will be skipped. Try `pip3 install phonenumbers` to install it.
+2021-03-18 08:22:50,694 1 INFO ? odoo.http: HTTP Configuring static files
+2021-03-18 08:22:50,703 1 INFO ? odoo.sql_db: Connection to the database failed
+2021-03-18 08:22:50,714 1 INFO ? werkzeug: 172.22.0.1 - - [18/Mar/2021 08:22:50] "GET / HTTP/1.1" 500 -
+2021-03-18 08:22:50,721 1 ERROR ? werkzeug: Error on request:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/werkzeug/serving.py", line 205, in run_wsgi
+    execute(self.server.app)
+  File "/usr/local/lib/python3.6/site-packages/werkzeug/serving.py", line 193, in execute
+    application_iter = app(environ, start_response)
+  File "/opt/openhrms/odoo/service/server.py", line 348, in app
+    return self.app(e, s)
+  File "/opt/openhrms/odoo/service/wsgi_server.py", line 180, in application
+    return application_unproxied(environ, start_response)
+  File "/opt/openhrms/odoo/service/wsgi_server.py", line 154, in application_unproxied
+    result = handler(environ, start_response)
+  File "/opt/openhrms/odoo/http.py", line 1321, in __call__
+    return self.dispatch(environ, start_response)
+  File "/opt/openhrms/odoo/http.py", line 1295, in __call__
+    return self.app(environ, start_wrapped)
+  File "/usr/local/lib/python3.6/site-packages/werkzeug/wsgi.py", line 599, in __call__
+    return self.app(environ, start_response)
+  File "/opt/openhrms/odoo/http.py", line 1458, in dispatch
+    self.setup_db(httprequest)
+  File "/opt/openhrms/odoo/http.py", line 1390, in setup_db
+    httprequest.session.db = db_monodb(httprequest)
+  File "/opt/openhrms/odoo/http.py", line 1542, in db_monodb
+    dbs = db_list(True, httprequest)
+  File "/opt/openhrms/odoo/http.py", line 1509, in db_list
+    dbs = odoo.service.db.list_dbs(force)
+  File "/opt/openhrms/odoo/service/db.py", line 369, in list_dbs
+    with closing(db.cursor()) as cr:
+  File "/opt/openhrms/odoo/sql_db.py", line 637, in cursor
+    return Cursor(self.__pool, self.dbname, self.dsn, serialized=serialized)
+  File "/opt/openhrms/odoo/sql_db.py", line 178, in __init__
+    self._cnx = pool.borrow(dsn)
+  File "/opt/openhrms/odoo/sql_db.py", line 520, in _locked
+    return fun(self, *args, **kwargs)
+  File "/opt/openhrms/odoo/sql_db.py", line 588, in borrow
+    **connection_info)
+  File "/usr/local/lib/python3.6/site-packages/psycopg2/__init__.py", line 130, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+psycopg2.OperationalError: FATAL:  role "openhrms" does not exist
+2021-03-18 08:22:50,881 1 INFO ? odoo.sql_db: Connection to the database failed
+2021-03-18 08:22:50,883 1 INFO ? werkzeug: 172.22.0.1 - - [18/Mar/2021 08:22:50] "GET /favicon.ico HTTP/1.1" 500 -
+2021-03-18 08:22:50,887 1 ERROR ? werkzeug: Error on request:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/werkzeug/serving.py", line 205, in run_wsgi
+    execute(self.server.app)
+  File "/usr/local/lib/python3.6/site-packages/werkzeug/serving.py", line 193, in execute
+    application_iter = app(environ, start_response)
+  File "/opt/openhrms/odoo/service/server.py", line 348, in app
+    return self.app(e, s)
+  File "/opt/openhrms/odoo/service/wsgi_server.py", line 180, in application
+    return application_unproxied(environ, start_response)
+  File "/opt/openhrms/odoo/service/wsgi_server.py", line 154, in application_unproxied
+    result = handler(environ, start_response)
+  File "/opt/openhrms/odoo/http.py", line 1321, in __call__
+    return self.dispatch(environ, start_response)
+  File "/opt/openhrms/odoo/http.py", line 1295, in __call__
+    return self.app(environ, start_wrapped)
+  File "/usr/local/lib/python3.6/site-packages/werkzeug/wsgi.py", line 599, in __call__
+    return self.app(environ, start_response)
+  File "/opt/openhrms/odoo/http.py", line 1458, in dispatch
+    self.setup_db(httprequest)
+  File "/opt/openhrms/odoo/http.py", line 1390, in setup_db
+    httprequest.session.db = db_monodb(httprequest)
+  File "/opt/openhrms/odoo/http.py", line 1542, in db_monodb
+    dbs = db_list(True, httprequest)
+  File "/opt/openhrms/odoo/http.py", line 1509, in db_list
+    dbs = odoo.service.db.list_dbs(force)
+  File "/opt/openhrms/odoo/service/db.py", line 369, in list_dbs
+    with closing(db.cursor()) as cr:
+  File "/opt/openhrms/odoo/sql_db.py", line 637, in cursor
+    return Cursor(self.__pool, self.dbname, self.dsn, serialized=serialized)
+  File "/opt/openhrms/odoo/sql_db.py", line 178, in __init__
+    self._cnx = pool.borrow(dsn)
+  File "/opt/openhrms/odoo/sql_db.py", line 520, in _locked
+    return fun(self, *args, **kwargs)
+  File "/opt/openhrms/odoo/sql_db.py", line 588, in borrow
+    **connection_info)
+  File "/usr/local/lib/python3.6/site-packages/psycopg2/__init__.py", line 130, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+psycopg2.OperationalError: FATAL:  role "openhrms" does not exist
+2021-03-18 08:25:52,257 1 INFO ? odoo.service.server: Initiating shutdown
+2021-03-18 08:25:52,261 1 INFO ? odoo.service.server: Hit CTRL-C again or send a second signal to force the shutdown.
+2021-03-18 08:26:10,067 1 INFO ? odoo: Odoo version 11.0
+2021-03-18 08:26:10,068 1 INFO ? odoo: Using configuration file at /etc/openhrms-server.conf
+2021-03-18 08:26:10,069 1 INFO ? odoo: addons paths: ['/root/.local/share/Odoo/addons/11.0', '/opt/openhrms/addons', '/opt/openhrms/openhrms', '/opt/openhrms/odoo/addons']
+2021-03-18 08:26:10,070 1 INFO ? odoo: database: openhrms@postgres:5432
+2021-03-18 08:26:10,121 1 INFO ? odoo.service.server: HTTP service (werkzeug) running on 9e22379d8009:8069
+2021-03-18 08:26:10,262 1 INFO ? odoo.addons.base.ir.ir_actions_report: Will use the Wkhtmltopdf binary at /usr/bin/wkhtmltopdf
+2021-03-18 08:26:48,335 1 INFO ? odoo.addons.sms.wizard.send_sms: The `phonenumbers` Python module is not available. Phone number validation will be skipped. Try `pip3 install phonenumbers` to install it.
+2021-03-18 08:26:49,298 1 INFO ? odoo.http: HTTP Configuring static files
+2021-03-18 08:26:49,316 1 INFO ? odoo.http: Generating nondb routing
+2021-03-18 08:26:49,330 1 INFO ? werkzeug: 172.18.0.1 - - [18/Mar/2021 08:26:49] "GET / HTTP/1.1" 200 -
+2021-03-18 08:26:49,457 1 INFO ? werkzeug: 172.18.0.1 - - [18/Mar/2021 08:26:49] "GET /web HTTP/1.1" 303 -
+2021-03-18 08:26:49,608 1 INFO ? werkzeug: 172.18.0.1 - - [18/Mar/2021 08:26:49] "GET /web/database/selector HTTP/1.1" 200 -
+2021-03-18 08:26:49,639 1 INFO ? werkzeug: 172.18.0.1 - - [18/Mar/2021 08:26:49] "GET /web/static/lib/fontawesome/css/font-awesome.css HTTP/1.1" 200 -
+2021-03-18 08:26:49,645 1 INFO ? werkzeug: 172.18.0.1 - - [18/Mar/2021 08:26:49] "GET /web/static/lib/bootstrap/css/bootstrap.css HTTP/1.1" 200 -
+2021-03-18 08:26:49,649 1 INFO ? werkzeug: 172.18.0.1 - - [18/Mar/2021 08:26:49] "GET /web/static/lib/jquery/jquery.js HTTP/1.1" 200 -
+2021-03-18 08:26:49,652 1 INFO ? werkzeug: 172.18.0.1 - - [18/Mar/2021 08:26:49] "GET /web/static/lib/bootstrap/js/modal.js HTTP/1.1" 200 -
+2021-03-18 08:26:49,654 1 INFO ? werkzeug: 172.18.0.1 - - [18/Mar/2021 08:26:49] "GET /web/static/lib/bootstrap/js/tooltip.js HTTP/1.1" 200 -
+2021-03-18 08:26:49,655 1 INFO ? werkzeug: 172.18.0.1 - - [18/Mar/2021 08:26:49] "GET /web/static/lib/bootstrap/js/dropdown.js HTTP/1.1" 200 -
+2021-03-18 08:26:49,679 1 INFO ? werkzeug: 172.18.0.1 - - [18/Mar/2021 08:26:49] "GET /web/static/src/img/logo2.png HTTP/1.1" 200 -
+2021-03-18 08:26:50,353 1 INFO ? werkzeug: 172.18.0.1 - - [18/Mar/2021 08:26:50] "GET /web/static/lib/fontawesome/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.1" 200 -
+2021-03-18 08:26:50,417 1 INFO ? werkzeug: 172.18.0.1 - - [18/Mar/2021 08:26:50] "GET /web/static/src/img/favicon.ico HTTP/1.1" 200 -
+2021-03-18 08:27:00,802 1 INFO ? odoo.service.server: Initiating shutdown
+2021-03-18 08:27:00,804 1 INFO ? odoo.service.server: Hit CTRL-C again or send a second signal to force the shutdown.
+2021-03-18 08:44:42,767 1 INFO ? odoo: Odoo version 11.0
+2021-03-18 08:44:42,782 1 INFO ? odoo: Using configuration file at /etc/openhrms-server.conf
+2021-03-18 08:44:42,782 1 INFO ? odoo: addons paths: ['/root/.local/share/Odoo/addons/11.0', '/opt/openhrms/addons', '/opt/openhrms/openhrms', '/opt/openhrms/odoo/addons']
+2021-03-18 08:44:42,783 1 INFO ? odoo: database: openhrms@postgres:5432
+2021-03-18 08:44:42,816 1 INFO ? odoo.service.server: HTTP service (werkzeug) running on 131d31876f52:8069
+2021-03-18 08:44:42,997 1 INFO ? odoo.addons.base.ir.ir_actions_report: Will use the Wkhtmltopdf binary at /usr/bin/wkhtmltopdf
+2021-03-18 08:50:36,996 1 INFO ? odoo.addons.sms.wizard.send_sms: The `phonenumbers` Python module is not available. Phone number validation will be skipped. Try `pip3 install phonenumbers` to install it.
+2021-03-18 08:50:38,051 1 INFO ? odoo.http: HTTP Configuring static files
+2021-03-18 08:50:38,063 1 INFO ? odoo.http: Generating nondb routing
+2021-03-18 08:50:38,075 1 INFO ? werkzeug: 172.19.0.1 - - [18/Mar/2021 08:50:38] "GET / HTTP/1.1" 200 -
+2021-03-18 08:50:38,133 1 INFO ? werkzeug: 172.19.0.1 - - [18/Mar/2021 08:50:38] "GET /web HTTP/1.1" 303 -
+2021-03-18 08:50:38,323 1 INFO ? werkzeug: 172.19.0.1 - - [18/Mar/2021 08:50:38] "GET /web/database/selector HTTP/1.1" 200 -
+2021-03-18 08:50:50,589 1 INFO ? odoo.service.server: Initiating shutdown
+2021-03-18 08:50:50,596 1 INFO ? odoo.service.server: Hit CTRL-C again or send a second signal to force the shutdown.
