@@ -36,11 +36,11 @@ RUN cd /tmp \
 
 
 
-COPY ./openhrms/config/openhrms-server.service /lib/systemd/system/
-COPY ./openhrms/config/openhrms-server.conf /etc/openhrms-server.conf
-COPY ./openhrms/web_responsive-11.0.2.0.3/web_responsive /opt/openhrms/addons/web_responsive
-COPY ./openhrms/hr_biometric_machine_zk_demo /opt/openhrms/addons/hr_biometric_machine_zk_demo
-COPY ./openhrms/logs /var/log/openhrms
+ADD ./openhrms/config/openhrms-server.service /lib/systemd/system/
+ADD ./openhrms/config/openhrms-server.conf /etc/openhrms-server.conf
+ADD ./openhrms/web_responsive-11.0.2.0.3/web_responsive /opt/openhrms/addons/web_responsive
+ADD ./openhrms/hr_biometric_machine_zk_demo /opt/openhrms/addons/hr_biometric_machine_zk_demo
+ADD ./openhrms/logs /var/log/openhrms
 
 RUN chmod 755 /lib/systemd/system/openhrms-server.service \
   && chown root: /lib/systemd/system/openhrms-server.service
@@ -55,7 +55,7 @@ RUN chown openhrms: /etc/openhrms-server.conf \
 
 
 
-RUN start openhrms-server
+# RUN start openhrms-server
 
 # ENTRYPOINT ["systemctl", "start", "openhrms-server"]
-# ENTRYPOINT [ "/opt/openhrms/odoo-bin", "-c", "/etc/openhrms-server.conf" ]
+ENTRYPOINT [ "/opt/openhrms/odoo-bin", "-c", "/etc/openhrms-server.conf" ]
