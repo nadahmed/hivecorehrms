@@ -53,6 +53,7 @@ RUN cp /opt/openhrms/debian/odoo.conf /etc/openhrms-server.conf
 RUN chown openhrms: /etc/openhrms-server.conf \
   && chmod 640 /etc/openhrms-server.conf
 
+RUN chmod +x /opt/openhrms/odoo-bin
 
 
 # RUN start openhrms-server
