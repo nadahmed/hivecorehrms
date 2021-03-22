@@ -59,4 +59,4 @@ RUN chmod +x /opt/openhrms/odoo-bin
 # RUN start openhrms-server
 
 # ENTRYPOINT ["systemctl", "start", "openhrms-server"]
-ENTRYPOINT [ "/opt/openhrms/odoo-bin", "-c", "/etc/openhrms-server.conf" ]
+CMD [ "/opt/openhrms/odoo-bin", "-c", "/etc/openhrms-server.conf" ]

@@ -5,3 +5,6 @@ setup:
 build:
   docker:
     web: Dockerfile
+
+run:
+  web: bundle exec /opt/openhrms/odoo-bin -c /etc/openhrms-server.conf
