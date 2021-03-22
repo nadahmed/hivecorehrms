@@ -7,4 +7,4 @@ build:
     web: Dockerfile
 
 run:
-  web: /opt/openhrms/odoo-bin -c /etc/openhrms-server.conf
+  web: /opt/openhrms/odoo-bin -c /etc/openhrms-server.conf --xmlrpc-port=$PORT
