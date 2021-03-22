@@ -33096,3 +33096,19 @@ psycopg2.OperationalError: FATAL:  role "openhrms" does not exist
 2021-03-18 08:50:38,323 1 INFO ? werkzeug: 172.19.0.1 - - [18/Mar/2021 08:50:38] "GET /web/database/selector HTTP/1.1" 200 -
 2021-03-18 08:50:50,589 1 INFO ? odoo.service.server: Initiating shutdown
 2021-03-18 08:50:50,596 1 INFO ? odoo.service.server: Hit CTRL-C again or send a second signal to force the shutdown.
+2021-03-21 06:47:40,098 1 INFO ? odoo: Odoo version 11.0
+2021-03-21 06:47:40,100 1 INFO ? odoo: Using configuration file at /etc/openhrms-server.conf
+2021-03-21 06:47:40,100 1 INFO ? odoo: addons paths: ['/root/.local/share/Odoo/addons/11.0', '/opt/openhrms/addons', '/opt/openhrms/openhrms', '/opt/openhrms/odoo/addons']
+2021-03-21 06:47:40,102 1 INFO ? odoo: database: openhrms@postgres:5432
+2021-03-21 06:47:40,127 1 INFO ? odoo.service.server: HTTP service (werkzeug) running on 3cabfe71bdd4:8069
+2021-03-21 06:47:40,235 1 INFO ? odoo.addons.base.ir.ir_actions_report: Will use the Wkhtmltopdf binary at /usr/bin/wkhtmltopdf
+2021-03-21 06:47:50,839 1 INFO ? odoo.http: Generating nondb routing
+2021-03-21 06:47:50,858 1 INFO ? werkzeug: 172.21.0.1 - - [21/Mar/2021 06:47:50] "GET / HTTP/1.1" 200 -
+2021-03-21 06:47:50,912 1 INFO ? werkzeug: 172.21.0.1 - - [21/Mar/2021 06:47:50] "GET /web HTTP/1.1" 303 -
+2021-03-21 06:47:51,140 1 INFO ? werkzeug: 172.21.0.1 - - [21/Mar/2021 06:47:51] "GET /web/database/selector HTTP/1.1" 200 -
+2021-03-21 06:47:51,375 1 INFO ? werkzeug: 172.21.0.1 - - [21/Mar/2021 06:47:51] "GET /web/static/src/img/favicon.ico HTTP/1.1" 404 -
+2021-03-21 06:47:52,267 1 INFO ? odoo.addons.sms.wizard.send_sms: The `phonenumbers` Python module is not available. Phone number validation will be skipped. Try `pip3 install phonenumbers` to install it.
+2021-03-21 06:47:54,038 1 INFO ? odoo.http: HTTP Configuring static files
+2021-03-21 06:47:54,050 1 INFO ? werkzeug: 172.21.0.1 - - [21/Mar/2021 06:47:54] "GET /favicon.ico HTTP/1.1" 404 -
+2021-03-21 07:10:08,818 1 INFO ? odoo.service.server: Initiating shutdown
+2021-03-21 07:10:08,843 1 INFO ? odoo.service.server: Hit CTRL-C again or send a second signal to force the shutdown.
