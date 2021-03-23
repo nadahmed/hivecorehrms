@@ -48,7 +48,7 @@ RUN chown -R openhrms: /opt/openhrms/
 
 RUN chown openhrms:root /var/log/openhrms
 
-RUN cp /opt/openhrms/debian/odoo.conf /etc/openhrms-server.conf
+# RUN cp /opt/openhrms/debian/odoo.conf /etc/openhrms-server.conf
 RUN chown openhrms: /etc/openhrms-server.conf \
   && chmod 640 /etc/openhrms-server.conf
 
