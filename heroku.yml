@@ -7,4 +7,4 @@ build:
     web: Dockerfile
 
 run:
-  web: /opt/openhrms/odoo-bin -c /etc/openhrms-server.conf --xmlrpc-port $PORT -r $DB_USER -w $DB_PASSWORD --db_host $DB_HOST --db_port $DB_PORT --database $DB_NAME --db-filter $DB_NAME
+  web: /opt/openhrms/odoo-bin -c /etc/openhrms-server.conf --xmlrpc-port $PORT -r $DB_USER -w $DB_PASSWORD --db_host $DB_HOST --db_port $DB_PORT --database $DB_NAME --db-filter $DB_NAME --no-database-list
