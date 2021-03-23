@@ -40,7 +40,6 @@ ADD ./openhrms/config/openhrms-server.service /lib/systemd/system/
 ADD ./openhrms/config/openhrms-server.conf /etc/openhrms-server.conf
 ADD ./openhrms/web_responsive-11.0.2.0.3/web_responsive /opt/openhrms/addons/web_responsive
 ADD ./openhrms/hr_biometric_machine_zk_demo /opt/openhrms/addons/hr_biometric_machine_zk_demo
-ADD ./openhrms/logs /var/log/openhrms
 
 RUN chmod 755 /lib/systemd/system/openhrms-server.service \
   && chown root: /lib/systemd/system/openhrms-server.service
